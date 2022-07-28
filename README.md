@@ -12,10 +12,10 @@ Also for learning more about OOP in C++.
 ### Linux
 ```bash
 # Clone the repository
-git clone
+git clone https://github.com/Caresle/basic_book_store.git
 
 # Enter the folder
-cd Basic_Book_Store
+cd basic_book_store
 
 # Make a build directory
 mkdir build
