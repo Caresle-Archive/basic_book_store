@@ -38,6 +38,7 @@ namespace BookStore {
 
     class ShoppingCart {
         public:
+            ShoppingCart();
             ShoppingCart(std::list<Book> products);
             
             void addProduct(Book book);
@@ -45,6 +46,7 @@ namespace BookStore {
             void showProducts();
 
             float calcTotal();
+            int getNumberProducts();
 
         protected:
             std::list<Book> products;

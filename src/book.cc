@@ -62,6 +62,11 @@ void Comic::print() {
 }
 
 // Shopping cart
+
+ShoppingCart::ShoppingCart() {
+
+}
+
 ShoppingCart::ShoppingCart(std::list<Book> products) {
     this->products = products;
 }
@@ -88,6 +93,16 @@ void ShoppingCart::showProducts() {
     }
 }
 
-float calcTotal() {
-    return 1.0f;
+float ShoppingCart::calcTotal() {
+    std::list<Book> const &list = this->products;
+    float total = 0.0f;
+    for (auto const &i : list) {
+        Book b = i;
+        total += b.getPrice();
+    }
+    return total;
+}
+
+int ShoppingCart::getNumberProducts() {
+    return this->products.size();
 }
